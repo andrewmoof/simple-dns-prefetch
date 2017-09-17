@@ -1,5 +1,10 @@
 === Simple DNS Prefetch ===
 Contributors: andrewmoof
+Plugin Name: Simple DNS Prefetch
+Plugin URI: https://wordpress.org/plugins/simple-dns-prefetch/
+Description: This plugin controls the DNS prefetch settings.
+Author: andrewmoof
+Author URI: http://moofmedia.com/
 Tags: dns, dns-prefetch, prefetch, optimization, speed
 Requires at least: 4.1
 Tested up to: 4.8.1
