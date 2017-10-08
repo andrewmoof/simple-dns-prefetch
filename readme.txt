@@ -1,13 +1,8 @@
 === Simple DNS Prefetch ===
 Contributors: andrewmoof
-Plugin Name: Simple DNS Prefetch
-Plugin URI: https://wordpress.org/plugins/simple-dns-prefetch/
-Description: This plugin controls the DNS prefetch settings.
-Author: andrewmoof
-Author URI: http://moofmedia.com/
 Tags: dns, dns-prefetch, prefetch, optimization, speed
 Requires at least: 4.1
-Tested up to: 4.8.1
+Tested up to: 4.8.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +32,9 @@ Go to Settings &raquo; Simple DNS Prefetch and enter any domains you want to be 
 2. Page source.
 
 == Changelog ==
+
+= 0.5.0 =
+- added "X-DNS-Prefetch-Control" meta-tag control
 
 = 0.4.2 =
 - code fix
