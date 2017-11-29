@@ -2,7 +2,7 @@
 Contributors: andrewmoof
 Tags: dns, dns-prefetch, prefetch, optimization, speed
 Requires at least: 4.1
-Tested up to: 4.8.2
+Tested up to: 4.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,9 @@ Go to Settings &raquo; Simple DNS Prefetch and enter any domains you want to be 
 2. Page source.
 
 == Changelog ==
+
+= 0.5.1 =
+- PHP Warning fix
 
 = 0.5.0 =
 - added "X-DNS-Prefetch-Control" meta-tag control

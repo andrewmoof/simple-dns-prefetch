@@ -3,7 +3,7 @@
   Plugin Name: Simple DNS Prefetch
   Plugin URI: https://wordpress.org/plugins/simple-dns-prefetch/
   Description: This plugin controls the DNS prefetch settings.
-  Version: 0.5.0
+  Version: 0.5.1
   Author: andrewmoof
   Author URI: http://moofmedia.com/
  */
@@ -37,9 +37,11 @@ if (!class_exists("Simple_DNS_Prefetch")) {
 
         // add prefetch hosts
         function fnsdp_add_prefetch() {
-            foreach (get_option('sdp_prefetch_host_list') as $host) {
-                echo "<link rel='dns-prefetch' href='//$host' />\n";
-            }
+			if (is_array(get_option('sdp_prefetch_host_list'))) {
+				foreach (get_option('sdp_prefetch_host_list') as $host) {
+					echo "<link rel='dns-prefetch' href='//$host' />\n";
+				}
+			}
         }
 
         // add prefetch header
@@ -133,7 +135,10 @@ if (!class_exists("Simple_DNS_Prefetch")) {
         function fnsdp_options_page() {
             echo '<h1>Simple DNS Prefetch</h1>';
 
-            $prefetch_host_list = implode("\n", get_option('sdp_prefetch_host_list'));
+			$prefetch_host_list = '';
+			if (is_array(get_option('sdp_prefetch_host_list'))) {
+				$prefetch_host_list = implode("\n", get_option('sdp_prefetch_host_list'));
+			}
             ?>
 
             <div class="wrap">
@@ -189,7 +194,7 @@ if (!class_exists("Simple_DNS_Prefetch")) {
                     }
                 }
 
-                show_textarea();
+                fnsdp_show_textarea();
 
             </script>
 
