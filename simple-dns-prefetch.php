@@ -3,7 +3,7 @@
   Plugin Name: Simple DNS Prefetch
   Plugin URI: https://wordpress.org/plugins/simple-dns-prefetch/
   Description: This plugin controls the DNS prefetch settings.
-  Version: 0.5.1
+  Version: 0.5.2
   Author: andrewmoof
   Author URI: http://moofmedia.com/
  */
@@ -17,7 +17,7 @@ if (!class_exists("Simple_DNS_Prefetch")) {
 
             add_action('wp_head', array($this, 'fnsdp_add_header'), 1);
 
-            if (is_admin) {
+            if ( is_admin() ) {
                 // Hook for adding admin menus
                 add_action('admin_init', array($this, 'fnsdp_setting_init'));
                 add_action('admin_menu', array($this, 'fnsdp_add_pages'));
